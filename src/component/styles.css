@@ -1,0 +1,64 @@
+/* styles.css */
+
+/* สไตล์สำหรับคอลัมน์ของการแสดงผลสินค้า */
+.card-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* สไตล์สำหรับแต่ละการแสดงผลสินค้า */
+.product-card {
+  width: calc(33.33% - 20px); /* กำหนดความกว้างของแต่ละการแสดงผลสินค้า */
+  margin: 10px; /* กำหนดระยะห่างระหว่างแต่ละการแสดงผลสินค้า */
+  border: 1px solid #ccc; /* กำหนดเส้นขอบสำหรับการแสดงผลสินค้า */
+  border-radius: 5px; /* กำหนดมุมโค้งสำหรับการแสดงผลสินค้า */
+  overflow: hidden; /* ทำให้เนื้อหาภายในการแสดงผลสินค้าไม่แสดงออกนอก */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับการแสดงผลสินค้า */
+}
+
+/* สไตล์สำหรับรูปภาพของสินค้า */
+.product-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd; /* เส้นขอบด้านล่างของรูปภาพ */
+}
+
+/* สไตล์สำหรับส่วนของข้อมูลสินค้า */
+.product-info {
+  padding: 10px;
+}
+
+/* สไตล์สำหรับชื่อสินค้า */
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* สไตล์สำหรับคำอธิบายสั้นๆ ของสินค้า */
+.product-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* สไตล์สำหรับข้อความเพิ่มเติมเกี่ยวกับสินค้า */
+.product-text {
+  font-size: 12px;
+}
+
+/* สไตล์สำหรับปุ่มลบสินค้า */
+.delete-button {
+  background-color: #ff6347; /* สีพื้นหลังของปุ่ม */
+  color: #fff; /* สีข้อความของปุ่ม */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* เพิ่มอนิเมชันเมื่อ hover หรือ focus */
+}
+
+.delete-button:hover,
+.delete-button:focus {
+  background-color: #d64535; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อ hover หรือ focus */
+}
