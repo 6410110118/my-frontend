@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './styles.css'; // เรียกใช้ไฟล์ CSS ที่เราเขียนขึ้นมา
 
-function App() {
+
+function Blogs() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -40,8 +40,11 @@ function App() {
                                 <h5 className="card-title product-name">{product.name}</h5> {/* เรียกใช้ className product-name เพื่อปรับแต่งชื่อสินค้า */}
                                 <p className="card-text product-description">{product.short_description}</p> {/* เรียกใช้ className product-description เพื่อปรับแต่งคำอธิบายสั้นๆ ของสินค้า */}
                                 <small className="card-text product-text">Created at: {new Date(product.created_at).toLocaleString()}</small> <br />
+                                
                                 <small className="card-text product-text">Updated at: {product.updated_at ? new Date(product.updated_at).toLocaleString() : 'N/A'}</small>
-                                <button onClick={() => deleteProduct(product.id)} className="btn btn-danger mt-2 delete-button">Delete</button> {/* เรียกใช้ className delete-button เพื่อปรับแต่งปุ่มลบสินค้า */}
+                                <div>
+                                    <button onClick={() => deleteProduct(product.id)} className="btn btn-danger mt-2 delete-button">Delete</button> {/* เรียกใช้ className delete-button เพื่อปรับแต่งปุ่มลบสินค้า */}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -51,4 +54,4 @@ function App() {
     );
 }
 
-export default App;
+export default Blogs;
